@@ -6,9 +6,9 @@ namespace Api.Controllers
     [ApiController]
     [Route("[controller]")]
     public class PedidoController : AppBaseController
-    {      
-        public PedidoController(IServiceProvider serviceProvider): base(serviceProvider)
+    {
+        public PedidoController(IServiceProvider serviceProvider) : base(serviceProvider)
         {
-        }      
+        }
     }
 }
