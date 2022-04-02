@@ -26,6 +26,10 @@ namespace Repository
             builder.Property(x => x.Ativo)
                 .HasColumnName("ativo")
                 .IsRequired();
+
+            builder.Property(x => x.IdEndereco)
+                .HasColumnName("id_endereco")
+                .IsRequired();
         }
     }
 }

@@ -40,6 +40,10 @@ namespace Repository
                 .HasMaxLength(8)
                 .HasColumnName("cep")
                 .IsRequired();
+
+            builder.HasOne(x => x.Cliente)
+                .WithOne(x => x.Endereco)
+                .HasForeignKey<Cliente>(x => x.IdEndereco);
         }
     }
 }
