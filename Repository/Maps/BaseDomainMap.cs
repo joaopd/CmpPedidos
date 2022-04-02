@@ -19,6 +19,16 @@ namespace Repository
             {
                 builder.ToTable(_tableName);
             }
+
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x =>x.Id)
+                .HasColumnName("id")
+                .IsRequired();
+
+            builder.Property(x => x.CriadoEm)
+                .HasColumnName("criado_em")
+                .IsRequired();
         }
     }
 }

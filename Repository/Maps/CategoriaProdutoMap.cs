@@ -4,23 +4,18 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Repository
 {
-    public class PromocaoProdutoMap : BaseDomainMap<PromocaoProduto>
+    public class CategoriaProdutoMap : BaseDomainMap<CategoriaProduto>
     {
-        public PromocaoProdutoMap() : base("tb_promocao_produto")
+        public CategoriaProdutoMap() : base("tb_categoria_produto")
         {
         }
-        public override void Configure(EntityTypeBuilder<PromocaoProduto> builder)
+        public override void Configure(EntityTypeBuilder<CategoriaProduto> builder)
         {
             base.Configure(builder);
 
             builder.Property(x => x.Nome)
-                .HasMaxLength(100)
+                .HasMaxLength(50)
                 .HasColumnName("nome")
-                .IsRequired();
-
-            builder.Property(x => x.Preco)
-                .HasPrecision(17,2)
-                .HasColumnName("preco")
                 .IsRequired();
 
             builder.Property(x => x.Ativo)
